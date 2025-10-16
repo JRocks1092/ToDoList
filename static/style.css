@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+    place-content: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+
+    align-self: stretch;
+    margin-top: 0px;
+    padding: 50px;
+}
+
+h2{
+    text-align: center;
+    color: white;
+
+    align-self: stretch;
+    padding: 10px;
+}
+ul {
+    list-style: none;
+    width: 350px;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: antiquewhite;
+    padding: 0.75rem;
+    border-radius: 6px;
+}
+
+.header {
+    flex: auto;
+    background-color: cadetblue;
+    align-self: stretch;
+}
+
+.header2 {
+    flex: auto;
+    background-color: cadetblue;
+    align-self: stretch;
+}
+
+input {
+    align-self: center;
+    flex: auto;
+}
+
+button {
+    flex: auto;
+    align-self: center;
+}
+
+label {
+    margin-left: 100px;
+
+}
+
+input {
+    margin-left: 20px;
+}
