@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>BMI Calculator</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 
 <body>
+    <div class="header">
+        <h1>To-Do List</h1>
+    </div>
     <form action="/" method="post">
-        <label for="txtHeight">Height (in cm) </label>
-        <input type="text" id="txtHeight" name="height">
-        <br>
-        <label for="txtWeight">Weight (in Kg) </label>
-        <input type="text" id="txtWeight" name="weight">
-        <br>
-        <input type="submit" value="Submit">
+        <input type="text" name="task" placeholder="Add task" required>
+        <button type="submit">+</button>
     </form>
-    {% if BMI %}
-        <hr>
-        <h2>{{ BMI }}</h2>
-        <h2>{{ Category }}</h2>
-    {% endif %}
+    <div class="header2">
+        <h2>Tasks</h2>
+    </div>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <span>{{ task }}</span>
+            <a href="{{ url_for('delete_task', task_id=loop.index0) }}">✕</a>
+        </li>
+        {% endfor %}
+    </ul>
+
 </body>
 
 </html>
